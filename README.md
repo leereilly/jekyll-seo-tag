@@ -78,7 +78,7 @@ The SEO tag will respect the following YAML front matter if included in a post, 
 
 * `title` - The title of the post, page, or document
 * `description` - A short description of the page's content
-* `image` - Relative URL to an image associated with the post, page, or document (e.g., `/assets/page-pic.jpg`)
+* `image` - URL to an image associated with the post, page, or document (e.g., `/assets/page-pic.jpg`)
 * `author` - Page-, post-, or document-specific author information (see below)
 
 ### Disabling `<title>` output
