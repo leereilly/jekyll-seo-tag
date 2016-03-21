@@ -136,6 +136,14 @@ describe Jekyll::SeoTag do
       end
     end
 
+    context 'with absolute site.logo' do
+      let(:site) { make_site('logo' => 'http://cdn.example.invalid/logo.png', 'url' => 'http://example.invalid') }
+
+      it 'outputs the logo' do
+        expect(json_data['logo']).to eql('http://cdn.example.invalid/logo.png')
+      end
+    end
+
     context 'with site.title' do
       let(:site) { make_site('title' => 'Foo', 'url' => 'http://example.invalid') }
 

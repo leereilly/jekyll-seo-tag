@@ -85,7 +85,11 @@
 {% endif %}
 
 {% if site.logo %}
-    {% assign seo_site_logo = site.logo | prepend: seo_url | escape %}
+  {% assign seo_site_logo = site.logo %}
+  {% unless seo_site_logo contains "://" %}
+    {% assign seo_site_logo = seo_site_logo | prepend: seo_url %}
+  {% endunless %}
+  {% assign seo_site_logo = seo_site_logo | escape %}
 {% endif %}
 
 {% if page.image %}
